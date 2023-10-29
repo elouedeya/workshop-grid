@@ -22,6 +22,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 h1,
@@ -31,8 +32,18 @@ h4,
 h5,
 h6 {
   font-family: "Staatliches", sans-serif;
+  margin: 1rem 0;
 }
-
+h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+p{
+    margin: 1rem 0;
+}
+img{
+    max-width: 100%;
+}
 a{
     font-size: 1.6rem;
     color: var(--dark);
@@ -72,7 +83,15 @@ ul{
     color: var(--primary);
 }
 
-
+/* generic */
+.article-author{
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+.text-hint{
+    color: var(--gray-hint);
+    font-size: 1.2rem;
+}
 
 
 /* header */
@@ -111,6 +130,46 @@ nav{
     justify-content: space-between;
     position: sticky;
     top:0;
+}
+
+/* showcase */
+.showcase{
+    min-height: 500px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-auto-rows:auto ;
+    padding: 2rem 0;
+}
+
+.showcase article:first-child {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+.showcase article:last-child {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+}
+
+.article-small {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 80px auto;
+    grid-template-rows: 80px;
+    grid-auto-rows: auto;
+}
+
+.article-small .article-content {
+    grid-column: span 2;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.article-small .article-author {
+    grid-column: span 2;
+}
+.article-small .text-hint {
+    grid-column: span 2;
 }
 
 
